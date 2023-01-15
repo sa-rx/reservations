@@ -13,7 +13,7 @@
     <div class="card mb-3">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img src="/uplaod/{{$service->url}}" class="card-img" alt="...">
+          <img src="{{$service->img_url}}" class="card-img" alt="...">
           </div>
 
           <div class="col-md-8">

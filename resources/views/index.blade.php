@@ -4,7 +4,7 @@
 @section('content')
 
 
-<div class="jumbotron  text-white " style="background-image: url(/web-img/{{$setting->img}}); text-align: center;  background-size: cover;  background-position: center;">
+<div class="jumbotron  text-white " style="background-image: url({{$setting->img_url}}); text-align: center;  background-size: cover;  background-position: center;">
   <h1 class="display-4 text-center">{{config('app.name', 'Laravel') }}</h1>
   <p class="  lead text-center">{!! nl2br( $setting->content )!!}</p>
   <a href="{{route('reservations.create')}}" class="btn btn-primary mb-4 btn-lg "> للحجز </a>
@@ -20,7 +20,7 @@
   @forelse($services as $service)
   <div class="col-md-4">
     <div class="card mb-4 mt-3 ">
-        <div class="custom-card-image" style="background-image: url(/uplaod/{{$service->url}}); height: 200px;  background-size: cover;    background-position: center;  background-size: contain; background-repeat: no-repeat;  background-position: center;"> </div>
+        <div class="custom-card-image" style="background-image: url({{$service->img_url}}); height: 200px;  background-size: cover;    background-position: center;  background-size: contain; background-repeat: no-repeat;  background-position: center;"> </div>
       <div class="card-body ">
         <h5 class="card-title "> {{$service->service_name}} </h5>
 
@@ -52,7 +52,7 @@
   @forelse($tools as $tool)
   <div class="col-md-4">
     <div class="card mb-4 mt-3 text-center">
-      <div class="custom-card-image" style="background-image: url(/tool-img/{{$tool->img}}); height: 200px;  background-size: cover;    background-position: center;  background-size: contain; background-repeat: no-repeat;  background-position: center;"> </div>
+      <div class="custom-card-image" style="background-image: url({{$tool->img_url}}); height: 200px;  background-size: cover;    background-position: center;  background-size: contain; background-repeat: no-repeat;  background-position: center;"> </div>
 
 
       <div class="card-body ">

@@ -15,7 +15,7 @@
 
 
     <div class="card mb-4 mt-3 ">
-      <div class="custom-card-image" style="background-image: url(/uplaod/{{$service->url}}); height: 200px;  background-size: cover;    background-position: center;  background-size: contain; background-repeat: no-repeat;  background-position: center;"> </div>
+      <div class="custom-card-image" style="background-image: url({{$service->img_url}}); height: 200px;  background-size: cover;    background-position: center;  background-size: contain; background-repeat: no-repeat;  background-position: center;"> </div>
 
 
         <div class="card-body bg-dark ">

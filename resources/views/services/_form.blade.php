@@ -28,10 +28,10 @@
 
 
 <div class="form-group col-md-6">
-  <label for="url">صوره للخدمه</label>
-  <input type="file" id="url" name="url" class="form-control" @isset($service) value="{{$service->url}}" @endisset>
+  <label for="img_url">صوره للخدمه</label>
+  <input type="text" id="img_url" name="img_url" class="form-control" @isset($service) value="{{$service->img_url}}" @endisset>
 @isset($service)
-  <img src="/uplaod/{{$service->url}}" alt="" style="width: 46px;">
+  <img src="{{$service->img_url}}" alt="" style="width: 46px;">
 @endisset
 </div>
 

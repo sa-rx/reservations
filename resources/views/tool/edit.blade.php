@@ -16,10 +16,10 @@
 
 
   <div class="form-group">
-    <label for="img">صوره الاداه</label>
-    <input type="file" name="img" class="form-control" @isset($tool) value="{{$tool->img}}" @endisset>
+    <label for="img_url">صوره الاداه</label>
+    <input type="text" name="img_url" class="form-control" @isset($tool) value="{{$tool->img_url}}" @endisset>
   @isset($tool)
-    <img src="/tool-img/{{$tool->img}}" alt="" style="width: 46px;">
+    <img src="{{$tool->img_url}}" alt="" style="width: 46px;">
   @endisset
   </div>
 

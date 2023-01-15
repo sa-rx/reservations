@@ -11,7 +11,7 @@ class ServiceController extends Controller
 
     public function __construct()
     {
-      $this->middleware('roles')->except('show');
+     // $this->middleware('roles')->except('show');
     }
 
     /**
@@ -48,16 +48,15 @@ class ServiceController extends Controller
       $request->validate([
         'service_name'=>'required',
         'price'=>'required',
-        'conten'=>'required',
-        'url'=>'required'
+        'conten'=>'required'
       ]);
 
-      $url=$request->file('url');
-      $img_name = time().'.'.$url->getClientOriginalExtension();
-      $url->move(public_path('uplaod'),$img_name);
+      //$url=$request->file('url');
+      //$img_name = time().'.'.$url->getClientOriginalExtension();
+      //$url->move(public_path('uplaod'),$img_name);
 
       $service = new Service();
-      $service->url = $img_name;
+      $service->img_url = request('img_url');
       $service->service_name = request('service_name');
       $service->price = request('price');
       $service->offer_price = request('offer_price');
@@ -112,16 +111,16 @@ class ServiceController extends Controller
         'service_name'=>'required',
         'price'=>'required',
         'conten'=>'required',
-        'url'=>'required'
+        'img_url'=>'required'
       ]);
 
 
-      $url=$request->file('url');
-      $img_name = time().'.'.$url->getClientOriginalExtension();
-      $url->move(public_path('uplaod'),$img_name);
+      //$url=$request->file('url');
+      //$img_name = time().'.'.$url->getClientOriginalExtension();
+      //$url->move(public_path('uplaod'),$img_name);
 
 
-      $service->url = $img_name;
+      $service->img_url = request('img_url');
       $service->service_name = request('service_name');
       $service->price = request('price');
       $service->offer_price = request('offer_price');

@@ -10,8 +10,8 @@
   <form  action="{{route('tools.store')}}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
-      <label for="img">صورة الاداه</label>
-      <input type="file" name="img" class="form-control">
+      <label for="img_url">صورة الاداه</label>
+      <input type="text" name="img_url" class="form-control">
     </div>
 
 

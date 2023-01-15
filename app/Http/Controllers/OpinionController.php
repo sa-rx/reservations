@@ -12,7 +12,7 @@ class OpinionController extends Controller
 
   public function __construct()
   {
-    $this->middleware('roles')->except('show','create','store','destroy','index');
+    //$this->middleware('roles')->except('show','create','store','destroy','index');
   }
     /**
      * Display a listing of the resource.

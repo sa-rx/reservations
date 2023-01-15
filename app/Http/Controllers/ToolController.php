@@ -10,7 +10,7 @@ class ToolController extends Controller
 
   public function __construct()
   {
-    $this->middleware('roles')->except('show');
+   // $this->middleware('roles')->except('show');
   }
 
     public function index()
@@ -30,17 +30,17 @@ class ToolController extends Controller
     {
 
       $request->validate([
-        'img'=>'required',
+        'img_url'=>'required',
         'title'=>'required',
         'content'=>'required'
 
       ]);
 
-        $img=$request->file('img');
-        $img_name = time().'.'.$img->getClientOriginalExtension();
-        $img->move(public_path('tool-img'),$img_name);
+        //$img=$request->file('img');
+        //$img_name = time().'.'.$img->getClientOriginalExtension();
+        //$img->move(public_path('tool-img'),$img_name);
         $tool = new Tool();
-        $tool->img = $img_name;
+        $tool->img_url = request('img_url');
         $tool->title = request('title');
         $tool->content = request('content');
         $tool->save();
@@ -75,11 +75,11 @@ class ToolController extends Controller
 
       ]);
 
-        $img=$request->file('img');
-        $img_name = time().'.'.$img->getClientOriginalExtension();
-        $img->move(public_path('tool-img'),$img_name);
+        //$img=$request->file('img');
+        //$img_name = time().'.'.$img->getClientOriginalExtension();
+        //$img->move(public_path('tool-img'),$img_name);
 
-        $tool->img = $img_name;
+        $tool->img_url = request('img_url');
         $tool->title = request('title');
         $tool->content = request('content');
         $tool->save();

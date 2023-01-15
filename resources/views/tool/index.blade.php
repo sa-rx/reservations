@@ -16,7 +16,7 @@
 
     <div class="card ">
 
-      <div class="custom-card-image" style="background-image: url(/tool-img/{{$tool->img}});  height: 200px;  background-size: cover;    background-position: center;  background-size: contain; background-repeat: no-repeat;  background-position: center;"> </div>
+      <div class="custom-card-image" style="background-image: url({{$tool->img_url}});  height: 200px;  background-size: cover;    background-position: center;  background-size: contain; background-repeat: no-repeat;  background-position: center;"> </div>
 
       <div class="card-body  bg-dark">
 

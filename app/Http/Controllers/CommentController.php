@@ -12,7 +12,7 @@ class CommentController extends Controller
 
   public function __construct()
   {
-    $this->middleware('roles')->except('show','create','store','destroy');
+   // $this->middleware('roles')->except('show','create','store','destroy');
   }
 
     /**

@@ -14,7 +14,7 @@ class ContactController extends Controller
 
     public function __construct()
     {
-      $this->middleware('roles')->except('create','store');
+     // $this->middleware('roles')->except('create','store');
     }
 
 

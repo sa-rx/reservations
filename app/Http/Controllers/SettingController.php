@@ -10,7 +10,7 @@ class SettingController extends Controller
 
   public function __construct()
   {
-    $this->middleware('roles');
+    //$this->middleware('roles');
   }
 
 
@@ -44,16 +44,16 @@ class SettingController extends Controller
     public function store(Request $request)
     {
       $request->validate([
-        'img'=>'required'
+        'img_url'=>'required'
 
       ]);
 
-        $img=$request->file('img');
-        $img_name = time().'.'.$img->getClientOriginalExtension();
-        $img->move(public_path('web-img'),$img_name);
+        //$img=$request->file('img');
+        //$img_name = time().'.'.$img->getClientOriginalExtension();
+        //$img->move(public_path('web-img'),$img_name);
 
         $setting = new Setting();
-        $setting->img = $img_name;
+        $setting->img_url = request('img_url');
         $setting->content = request('content');
         $setting->save();
 
@@ -101,12 +101,12 @@ class SettingController extends Controller
       ]);
 
 
-      $img=$request->file('img');
-      $img_name = time().'.'.$img->getClientOriginalExtension();
-      $img->move(public_path('web-img'),$img_name);
+      //$img=$request->file('img');
+      //$img_name = time().'.'.$img->getClientOriginalExtension();
+      //$img->move(public_path('web-img'),$img_name);
 
 
-      $setting->img = $img_name;
+      $setting->img_url = request('img_url');
       $setting->content = request('content');
       $setting->save();
 

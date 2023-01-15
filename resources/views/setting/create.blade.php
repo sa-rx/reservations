@@ -15,8 +15,8 @@
 
 
     <div class="form-group">
-      <label for="img">صورة الصفحه الرئسيه</label>
-      <input type="file" name="img" class="form-control">
+      <label for="img_url">صورة الصفحه الرئسيه</label>
+      <input type="text" name="img_url" class="form-control">
     </div>
 
 

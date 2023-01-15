@@ -19,7 +19,7 @@ class CreateServicesTable extends Migration
             $table->string('service_name');
             $table->unsignedInteger('price');
             $table->unsignedInteger('offer_price')->nullable();
-            $table->string('url');
+            $table->text('img_url');
             $table->text('conten');
 
             $table->timestamps();

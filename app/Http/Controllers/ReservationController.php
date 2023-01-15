@@ -12,7 +12,7 @@ class ReservationController extends Controller
 
   public function __construct()
   {
-    $this->middleware('roles')->except('show','create','store');
+    //$this->middleware('roles')->except('show','create','store');
   }
 
 

@@ -9,7 +9,7 @@
   <div class="card mb-3 bg-dark text-light ">
   <div class="row no-gutters">
   <div class="col-md-4">
-  <img src="/web-img/{{$setting->img}}" class="card-img" alt="...">
+  <img src="{{$setting->img_url}}" class="card-img" alt="...">
   </div>
   <div class="col-md-8">
   <div class="card-body ">

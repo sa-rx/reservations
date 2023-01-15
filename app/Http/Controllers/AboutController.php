@@ -10,7 +10,7 @@ class AboutController extends Controller
 
   public function __construct()
   {
-    $this->middleware('roles');
+    //$this->middleware('roles');
   }
 
 
